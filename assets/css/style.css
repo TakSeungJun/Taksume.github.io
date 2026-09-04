@@ -155,7 +155,11 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body {
+  background:
+    radial-gradient(circle at 15% 0%, hsla(45, 100%, 72%, 0.08), transparent 32rem),
+    var(--smoky-black);
+}
 
 
 
@@ -836,6 +840,177 @@ main {
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cv-download {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--orange-yellow-crayola);
+  background: var(--onyx);
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  transition: border-color var(--transition-1), transform var(--transition-1);
+}
+
+.cv-download:hover,
+.cv-download:focus-visible {
+  border-color: var(--vegas-gold);
+  transform: translateY(-2px);
+}
+
+.cv-download ion-icon { font-size: 16px; }
+
+.timeline-date {
+  color: var(--vegas-gold);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.timeline-text strong { color: var(--white-2); }
+
+.technical-skills-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 45px;
+  font-size: var(--fs-6);
+}
+
+.technical-skills-list div {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.technical-skills-list dt {
+  color: var(--white-2);
+  font-weight: var(--fw-600);
+}
+
+.technical-skills-list dd { color: var(--light-gray); }
+
+.publication-group:not(:last-child) { margin-bottom: 26px; }
+
+.publication-group-title {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.publication-list { display: grid; gap: 12px; }
+
+.publication-item,
+.featured-publication {
+  background: var(--bg-gradient-jet);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  padding: 18px;
+  transition: border-color var(--transition-1), transform var(--transition-1);
+}
+
+.publication-item:hover,
+.featured-publication:hover {
+  border-color: hsla(45, 100%, 72%, 0.45);
+  transform: translateY(-2px);
+}
+
+.publication-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.publication-venue,
+.publication-status {
+  width: max-content;
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-600);
+  letter-spacing: 0.04em;
+}
+
+.publication-venue {
+  color: var(--smoky-black);
+  background: var(--orange-yellow-crayola);
+}
+
+.publication-status {
+  color: var(--light-gray);
+  background: var(--onyx);
+  border: 1px solid var(--jet);
+}
+
+.publication-title {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  line-height: 1.55;
+}
+
+.publication-english-title {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+.publication-authors,
+.publication-note {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.publication-authors strong { color: var(--orange-yellow-crayola); }
+
+.publication-authors sup,
+.publication-note sup {
+  color: var(--orange-yellow-crayola);
+  font-size: 0.72em;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.publication-links a {
+  color: var(--orange-yellow-crayola);
+  border: 1px solid var(--jet);
+  border-radius: 7px;
+  padding: 4px 8px;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  transition: background var(--transition-1), border-color var(--transition-1);
+}
+
+.publication-links a:hover,
+.publication-links a:focus-visible {
+  background: var(--onyx);
+  border-color: var(--vegas-gold);
+}
+
+.about_publications { margin-top: 8px; }
 
 /**
  * skills 
@@ -1929,4 +2104,229 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/* CV layout */
+.cv .timeline-list { margin-left: 0; }
+
+.cv .timeline-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+  padding-left: 27px;
+}
+
+.cv .timeline-item:not(:last-child) { margin-bottom: 28px; }
+
+.cv .timeline-item:not(:last-child)::before {
+  top: 10px;
+  left: 3px;
+  height: calc(100% + 28px);
+}
+
+.cv .timeline-item::after {
+  top: 6px;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .cv .timeline-item {
+    grid-template-columns: 155px minmax(0, 1fr);
+    gap: 28px;
+    padding-left: 0;
+  }
+
+  .cv .timeline-item:not(:last-child)::before { left: 169px; }
+
+  .cv .timeline-item::after {
+    height: 8px;
+    width: 8px;
+    left: 166px;
+  }
+
+  .cv .timeline-content { padding-left: 12px; }
+}
+
+@media (min-width: 1024px) {
+  .cv-header { padding-right: 210px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  @page { size: A4; margin: 10mm; }
+
+  :root {
+    --white-2: #111827;
+    --light-gray: #374151;
+    --light-gray-70: #4b5563;
+    --vegas-gold: #8a6500;
+    --orange-yellow-crayola: #8a6500;
+    --jet: #d1d5db;
+    --fs-1: 26px;
+    --fs-2: 19px;
+    --fs-4: 14px;
+    --fs-5: 12px;
+    --fs-6: 11px;
+    --fs-7: 10px;
+    --fs-8: 9px;
+  }
+
+  body { background: white; }
+
+  main {
+    display: block;
+    max-width: none;
+    margin: 0;
+  }
+
+  .sidebar,
+  .navbar,
+  .about,
+  .cv-download { display: none !important; }
+
+  .main-content,
+  article.cv {
+    display: block !important;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+  }
+
+  article.cv {
+    color: #111827;
+    background: white;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    zoom: 0.94;
+  }
+
+  .cv-header { padding-right: 0; }
+
+  .article-title { margin-bottom: 10px; }
+
+  .timeline { margin-bottom: 12px; }
+
+  .timeline .title-wrapper {
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .icon-box {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .icon-box::before { display: none; }
+
+  .cv .timeline-item {
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 20px;
+    padding-left: 0;
+  }
+
+  .cv .timeline-item:not(:last-child) { margin-bottom: 8px; }
+
+  .cv .timeline-item:not(:last-child)::before {
+    left: 132px;
+    height: calc(100% + 8px);
+  }
+
+  .cv .timeline-item::after { left: 129px; }
+
+  .cv .timeline-content { padding-left: 8px; }
+
+  .publications-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .publications-section > .title-wrapper { grid-column: 1 / -1; }
+
+  .publication-group:not(:last-child) { margin-bottom: 0; }
+
+  .publication-group-title { margin-bottom: 7px; }
+
+  .publication-list { gap: 6px; }
+
+  .publication-authors,
+  .publication-note { margin-top: 3px; }
+
+  .publication-links {
+    gap: 5px;
+    margin-top: 6px;
+  }
+
+  .research-projects .timeline-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 22px;
+  }
+
+  .cv .research-projects .timeline-item {
+    display: block;
+    border-left: 2px solid var(--jet);
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .cv .research-projects .timeline-item::before,
+  .cv .research-projects .timeline-item::after { display: none; }
+
+  .research-projects .timeline-date { margin-bottom: 3px; }
+
+  .cv .research-projects .timeline-content { padding-left: 0; }
+
+  .technical-skills-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 18px;
+    padding-left: 0;
+    font-size: var(--fs-8);
+    line-height: 1.35;
+  }
+
+  .technical-skills-list div {
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .timeline.technical-skills {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+
+  .timeline.technical-skills .title-wrapper { margin-bottom: 0; }
+
+  .icon-box,
+  .publication-item { box-shadow: none; }
+
+  .icon-box::before { background: white; }
+
+  .publication-item {
+    background: white;
+    break-inside: avoid;
+    padding: 10px;
+  }
+
+  .publication-venue {
+    color: #111827;
+    background: #f3d266;
+  }
+
+  .publication-status { background: #f3f4f6; }
+
+  .timeline { break-inside: auto; }
 }

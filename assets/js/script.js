@@ -17,6 +17,9 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
+const printCvBtn = document.querySelector("[data-print-cv]");
+
+printCvBtn.addEventListener("click", function () { window.print(); });
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
@@ -35,3 +38,5 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+if (window.location.hash === "#cv") navigationLinks[1].click();
