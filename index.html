@@ -11,7 +11,7 @@
   <!-- favicon -->
   <link rel="shortcut icon" href="./IMG_3679.jpg" type="image/jpeg">
 
-  <!-- custom css -->
+  <!-- existing stylesheet -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <!-- google font -->
@@ -21,15 +21,135 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   >
+
+  <!-- Research portfolio refinements -->
+  <style>
+
+    /* =========================================================
+       RESEARCH PORTFOLIO REFINEMENTS
+       ========================================================= */
+
+    .publication-summary {
+      color: var(--light-gray) !important;
+      font-size: var(--fs-7);
+      font-weight: var(--fw-400);
+      line-height: 1.65;
+      margin-top: 10px;
+      max-width: 760px;
+    }
+
+    .about-text strong {
+      color: var(--white-2);
+      font-weight: var(--fw-600);
+    }
+
+    .research {
+      margin-top: 32px;
+    }
+
+    .about_publications {
+      margin-top: 36px;
+    }
+
+    .featured-publication {
+      background:
+        linear-gradient(
+          135deg,
+          hsla(45, 100%, 72%, 0.055),
+          transparent 45%
+        ),
+        var(--bg-gradient-jet);
+    }
+
+    .featured-publication .publication-title {
+      font-size: 16px;
+      font-weight: var(--fw-600);
+    }
+
+    .cv .timeline {
+      margin-bottom: 38px;
+    }
+
+    .cv .title-wrapper .h3 {
+      font-weight: var(--fw-600);
+    }
+
+    .research-projects .timeline-text {
+      line-height: 1.7;
+    }
+
+    .research-projects .timeline-item-title {
+      font-weight: var(--fw-600);
+    }
+
+    .technical-skills-list {
+      row-gap: 14px;
+    }
+
+    .technical-skills-list dt {
+      color: var(--orange-yellow-crayola);
+    }
+
+    .info-content .title {
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .research-keywords {
+      color: var(--orange-yellow-crayola);
+      font-size: var(--fs-7);
+      font-weight: var(--fw-500);
+      line-height: 1.8;
+      margin-top: 5px;
+    }
+
+    .project-status {
+      color: var(--orange-yellow-crayola);
+      font-weight: var(--fw-500);
+    }
+
+    @media (min-width: 1024px) {
+
+      .about-text {
+        max-width: 790px;
+      }
+
+      .featured-publication {
+        padding: 22px;
+      }
+
+      .publication-title {
+        letter-spacing: -0.01em;
+      }
+    }
+
+    @media (max-width: 579px) {
+
+      .publication-summary {
+        font-size: 13px;
+      }
+
+      .research {
+        margin-top: 26px;
+      }
+
+      .about_publications {
+        margin-top: 28px;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
   <main>
 
-    <!-- =========================
+
+    <!-- ======================================================
          SIDEBAR
-    ========================== -->
+         ====================================================== -->
 
     <aside class="sidebar" data-sidebar>
 
@@ -44,6 +164,7 @@
         </figure>
 
         <div class="info-content">
+
           <h1 class="name" title="SeungJun Tak">
             SeungJun Tak
           </h1>
@@ -51,6 +172,7 @@
           <p class="title">
             M.S.–Ph.D. Student · SLAM & 3D Vision
           </p>
+
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -60,13 +182,16 @@
 
       </div>
 
+
       <div class="sidebar-info_more">
 
         <div class="separator"></div>
 
         <ul class="contacts-list">
 
+
           <!-- Email -->
+
           <li class="contact-item">
 
             <div class="icon-box">
@@ -74,7 +199,10 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Email</p>
+
+              <p class="contact-title">
+                Email
+              </p>
 
               <a
                 href="mailto:tmdwns8840@g.skku.edu"
@@ -82,11 +210,14 @@
               >
                 tmdwns8840@g.skku.edu
               </a>
+
             </div>
 
           </li>
 
+
           <!-- GitHub -->
+
           <li class="contact-item">
 
             <div class="icon-box">
@@ -94,7 +225,10 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">GitHub</p>
+
+              <p class="contact-title">
+                GitHub
+              </p>
 
               <a
                 href="https://github.com/TakSeungJun"
@@ -104,11 +238,14 @@
               >
                 TakSeungJun
               </a>
+
             </div>
 
           </li>
 
+
           <!-- Google Scholar -->
+
           <li class="contact-item">
 
             <div class="icon-box">
@@ -116,7 +253,10 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Google Scholar</p>
+
+              <p class="contact-title">
+                Google Scholar
+              </p>
 
               <a
                 href="https://scholar.google.com/citations?user=KfSu3l8AAAAJ&hl=ko"
@@ -126,11 +266,14 @@
               >
                 Link
               </a>
+
             </div>
 
           </li>
 
+
           <!-- Location -->
+
           <li class="contact-item">
 
             <div class="icon-box">
@@ -138,21 +281,33 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
 
-              <address>Sungkyunkwan Univ.</address>
-              <address>Suwon, Republic of Korea</address>
+              <p class="contact-title">
+                Location
+              </p>
+
+              <address>
+                Sungkyunkwan Univ.
+              </address>
+
+              <address>
+                Suwon, Republic of Korea
+              </address>
+
             </div>
 
           </li>
 
         </ul>
 
+
         <div class="separator"></div>
+
 
         <ul class="social-list">
 
           <li class="social-item">
+
             <a
               href="https://www.linkedin.com/in/sj-tak-98b402366/"
               target="_blank"
@@ -161,6 +316,7 @@
             >
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
+
           </li>
 
         </ul>
@@ -170,37 +326,43 @@
     </aside>
 
 
-    <!-- =========================
+
+    <!-- ======================================================
          MAIN CONTENT
-    ========================== -->
+         ====================================================== -->
 
     <div class="main-content">
 
 
-      <!-- =========================
+      <!-- ====================================================
            NAVBAR
-      ========================== -->
+           ==================================================== -->
 
       <nav class="navbar">
 
         <ul class="navbar-list">
 
           <li class="navbar-item">
+
             <button
               class="navbar-link active"
               data-nav-link
             >
               About
             </button>
+
           </li>
 
+
           <li class="navbar-item">
+
             <button
               class="navbar-link"
               data-nav-link
             >
               CV
             </button>
+
           </li>
 
         </ul>
@@ -208,20 +370,27 @@
       </nav>
 
 
-      <!-- =========================
+
+      <!-- ====================================================
            ABOUT
-      ========================== -->
+           ==================================================== -->
 
       <article
         class="about active"
         data-page="about"
       >
 
+
+        <!-- About me -->
+
         <header>
+
           <h3 class="h3 article-title">
             About me
           </h3>
+
         </header>
+
 
         <section class="about-text">
 
@@ -242,9 +411,10 @@
         </section>
 
 
+
         <!-- Research Interest -->
 
-        <section class="research interest">
+        <section class="research">
 
           <h3 class="h3 article-title">
             Research Interest
@@ -264,12 +434,9 @@
               changing environments.
             </p>
 
-            <p>
-              My broader research interests include
-              <strong>
-                LiDAR SLAM, 3D Gaussian Splatting, dynamic and lifelong
-                mapping, 3D reconstruction, localization, and robot perception
-              </strong>.
+            <p class="research-keywords">
+              LiDAR SLAM · 3D Gaussian Splatting · Dynamic & Lifelong Mapping ·
+              3D Reconstruction · Localization · Robot Perception
             </p>
 
           </section>
@@ -277,17 +444,20 @@
         </section>
 
 
-        <!-- Publications -->
+
+        <!-- Selected Publication -->
 
         <section class="about_publications">
 
           <h3 class="h3 article-title">
-            Publications
+            Selected Publication
           </h3>
 
           <div class="featured-publication">
 
+
             <div class="publication-meta">
+
               <span class="publication-venue">
                 ECCV 2026
               </span>
@@ -295,41 +465,42 @@
               <span class="publication-status">
                 Accepted
               </span>
+
             </div>
+
 
             <h4 class="publication-title">
               Real-Time LiDAR Gaussian Splatting SLAM via
               Geometry-Aware Covariance Coupling
             </h4>
 
+
             <p class="publication-authors">
+
               <strong>
                 SeungJun Tak<sup>*</sup>
               </strong>,
+
               Yewon Jeon<sup>*</sup>,
               Jaeik Hwang,
               Suk Min Hwang,
               Seongbo Ha,
               Hyeonwoo Yu
+
             </p>
+
 
             <p class="publication-note">
               <sup>*</sup> Equal contribution
             </p>
 
-            <p
-              class="publication-summary"
-              style="
-                color: var(--light-gray);
-                font-size: var(--fs-7);
-                line-height: 1.6;
-                margin-top: 10px;
-              "
-            >
+
+            <p class="publication-summary">
               Real-time LiDAR-only SLAM with dense Gaussian mapping,
               coupling geometric covariance between tracking and mapping
               for accurate and efficient 3D scene reconstruction.
             </p>
+
 
             <div class="publication-links">
 
@@ -374,14 +545,18 @@
       </article>
 
 
-      <!-- =========================
+
+      <!-- ====================================================
            CV
-      ========================== -->
+           ==================================================== -->
 
       <article
         class="cv"
         data-page="cv"
       >
+
+
+        <!-- CV Header -->
 
         <header class="cv-header">
 
@@ -394,16 +569,22 @@
             type="button"
             data-print-cv
           >
+
             <ion-icon name="download-outline"></ion-icon>
-            <span>Save as PDF</span>
+
+            <span>
+              Save as PDF
+            </span>
+
           </button>
 
         </header>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              EDUCATION
-        ========================== -->
+             ================================================== -->
 
         <section class="timeline">
 
@@ -419,7 +600,11 @@
 
           </div>
 
+
           <ol class="timeline-list">
+
+
+            <!-- SKKU -->
 
             <li class="timeline-item">
 
@@ -434,18 +619,34 @@
                 </h4>
 
                 <p class="timeline-text">
-                  <strong>Sungkyunkwan University</strong><br>
-                  Intelligent Robotics<br>
-                  Advisor: Prof. Hyeonwoo Yu<br>
+
+                  <strong>
+                    Sungkyunkwan University
+                  </strong>
+
+                  <br>
+
+                  Intelligent Robotics
+
+                  <br>
+
+                  Advisor: Prof. Hyeonwoo Yu
+
+                  <br>
+
                   <strong>
                     Expected Graduation: August 2029
                   </strong>
+
                 </p>
 
               </div>
 
             </li>
 
+
+
+            <!-- UNIST -->
 
             <li class="timeline-item">
 
@@ -460,7 +661,11 @@
                 </h4>
 
                 <p class="timeline-text">
-                  <strong>UNIST</strong>
+
+                  <strong>
+                    UNIST
+                  </strong>
+
                 </p>
 
               </div>
@@ -472,11 +677,13 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              PUBLICATIONS
-        ========================== -->
+             ================================================== -->
 
         <section class="timeline publications-section">
+
 
           <div class="title-wrapper">
 
@@ -491,6 +698,7 @@
           </div>
 
 
+
           <!-- International -->
 
           <div class="publication-group">
@@ -499,9 +707,11 @@
               International
             </h4>
 
+
             <ol class="publication-list">
 
               <li class="publication-item">
+
 
                 <div class="publication-meta">
 
@@ -515,10 +725,12 @@
 
                 </div>
 
+
                 <h4 class="publication-title">
                   Real-Time LiDAR Gaussian Splatting SLAM via
                   Geometry-Aware Covariance Coupling
                 </h4>
+
 
                 <p class="publication-authors">
 
@@ -534,23 +746,18 @@
 
                 </p>
 
+
                 <p class="publication-note">
                   <sup>*</sup> Equal contribution
                 </p>
 
-                <p
-                  class="publication-summary"
-                  style="
-                    color: var(--light-gray);
-                    font-size: var(--fs-7);
-                    line-height: 1.6;
-                    margin-top: 8px;
-                  "
-                >
+
+                <p class="publication-summary">
                   Real-time LiDAR-only SLAM with dense Gaussian mapping,
                   coupling geometric covariance between tracking and mapping
                   for accurate and efficient 3D scene reconstruction.
                 </p>
+
 
                 <div class="publication-links">
 
@@ -595,7 +802,8 @@
           </div>
 
 
-          <!-- Domestic -->
+
+          <!-- Domestic Conferences -->
 
           <div class="publication-group">
 
@@ -603,7 +811,11 @@
               Domestic Conferences
             </h4>
 
+
             <ol class="publication-list">
+
+
+              <!-- KRoC 2026 -->
 
               <li class="publication-item">
 
@@ -634,6 +846,9 @@
 
               </li>
 
+
+
+              <!-- KRoC 2025 -->
 
               <li class="publication-item">
 
@@ -671,11 +886,13 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              RESEARCH PROJECTS
-        ========================== -->
+             ================================================== -->
 
         <section class="timeline research-projects">
+
 
           <div class="title-wrapper">
 
@@ -689,10 +906,11 @@
 
           </div>
 
+
           <ol class="timeline-list">
 
 
-            <!-- LG Humanoid -->
+            <!-- LG Electronics Humanoid -->
 
             <li class="timeline-item">
 
@@ -708,17 +926,28 @@
                 </h4>
 
                 <p class="timeline-text">
-                  <strong>LG Electronics, HS</strong>
-                  · Research Participant · Ongoing<br>
+
+                  <strong>
+                    LG Electronics, HS
+                  </strong>
+
+                  · Research Participant ·
+                  <span class="project-status">
+                    Ongoing
+                  </span>
+
+                  <br>
 
                   Developing a real-time SLAM system for humanoid robots
                   and low-profile AMRs, with a focus on robust localization
                   and 3D mapping for embodied robotic platforms.
+
                 </p>
 
               </div>
 
             </li>
+
 
 
             <!-- LG PRI Drone -->
@@ -736,17 +965,25 @@
                 </h4>
 
                 <p class="timeline-text">
-                  <strong>LG PRI</strong>
-                  · Research Participant<br>
+
+                  <strong>
+                    LG PRI
+                  </strong>
+
+                  · Research Participant
+
+                  <br>
 
                   Optimized the SLAM pipeline for aerial drone operation
                   and developed loop-closure functionality for robust
                   trajectory estimation in drone-based monitoring.
+
                 </p>
 
               </div>
 
             </li>
+
 
 
             <!-- Samsung -->
@@ -764,12 +1001,19 @@
                 </h4>
 
                 <p class="timeline-text">
-                  <strong>Samsung Electronics GTR</strong>
-                  · Research Participant<br>
+
+                  <strong>
+                    Samsung Electronics GTR
+                  </strong>
+
+                  · Research Participant
+
+                  <br>
 
                   Developed structural alignment between CAD floor plans
                   and reconstructed 3D maps, and optimized the localization
                   and mapping pipeline for AMR deployment.
+
                 </p>
 
               </div>
@@ -777,7 +1021,8 @@
             </li>
 
 
-            <!-- LG Gaussian Mapping -->
+
+            <!-- LG Gaussian Map -->
 
             <li class="timeline-item">
 
@@ -793,17 +1038,25 @@
                 </h4>
 
                 <p class="timeline-text">
-                  <strong>LG Electronics, HS</strong>
-                  · Research Participant<br>
+
+                  <strong>
+                    LG Electronics, HS
+                  </strong>
+
+                  · Research Participant
+
+                  <br>
 
                   Developed localization on Gaussian Splatting maps and
                   leveraged MASt3R-based place recognition for robust
                   global initialization and loop-closure detection.
+
                 </p>
 
               </div>
 
             </li>
+
 
 
             <!-- Mobyus -->
@@ -822,12 +1075,19 @@
                 </h4>
 
                 <p class="timeline-text">
-                  <strong>Mobyus</strong>
-                  · Research Participant<br>
+
+                  <strong>
+                    Mobyus
+                  </strong>
+
+                  · Research Participant
+
+                  <br>
 
                   Designed pole-based geometric features tailored to
                   logistics environments for robust LiDAR SLAM and
                   map-based localization in repetitive warehouse scenes.
+
                 </p>
 
               </div>
@@ -839,11 +1099,13 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              TECHNICAL SKILLS
-        ========================== -->
+             ================================================== -->
 
         <section class="timeline technical-skills">
+
 
           <div class="title-wrapper">
 
@@ -857,17 +1119,29 @@
 
           </div>
 
+
           <dl class="technical-skills-list">
 
+
             <div>
-              <dt>Programming</dt>
+
+              <dt>
+                Programming
+              </dt>
+
               <dd>
                 C++, Python, CUDA
               </dd>
+
             </div>
 
+
             <div>
-              <dt>Robotics & SLAM</dt>
+
+              <dt>
+                Robotics & SLAM
+              </dt>
+
               <dd>
                 ROS/ROS 2,
                 LiDAR SLAM,
@@ -877,20 +1151,32 @@
                 Loop Closure,
                 Localization
               </dd>
+
             </div>
 
+
             <div>
-              <dt>3D Vision & Mapping</dt>
+
+              <dt>
+                3D Vision & Mapping
+              </dt>
+
               <dd>
                 Gaussian Splatting,
                 3D Reconstruction,
                 Point Cloud Processing,
                 Place Recognition
               </dd>
+
             </div>
 
+
             <div>
-              <dt>Libraries & Frameworks</dt>
+
+              <dt>
+                Libraries & Frameworks
+              </dt>
+
               <dd>
                 PyTorch,
                 GTSAM,
@@ -898,16 +1184,23 @@
                 Open3D,
                 Eigen
               </dd>
+
             </div>
 
+
             <div>
-              <dt>Development</dt>
+
+              <dt>
+                Development
+              </dt>
+
               <dd>
                 Linux,
                 Git,
                 Docker,
                 CMake
               </dd>
+
             </div>
 
           </dl>
@@ -915,11 +1208,13 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              EXPERIENCE
-        ========================== -->
+             ================================================== -->
 
         <section class="timeline">
+
 
           <div class="title-wrapper">
 
@@ -933,7 +1228,11 @@
 
           </div>
 
+
           <ol class="timeline-list">
+
+
+            <!-- TA 1 -->
 
             <li class="timeline-item">
 
@@ -949,13 +1248,18 @@
                 </h4>
 
                 <p class="timeline-text">
-                  <strong>UNIST</strong>
+                  <strong>
+                    UNIST
+                  </strong>
                 </p>
 
               </div>
 
             </li>
 
+
+
+            <!-- TA 2 -->
 
             <li class="timeline-item">
 
@@ -973,6 +1277,9 @@
 
             </li>
 
+
+
+            <!-- TA 3 -->
 
             <li class="timeline-item">
 
@@ -1006,10 +1313,12 @@
   </main>
 
 
-  <!-- custom js -->
+
+  <!-- existing JS -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- ionicons -->
+
+  <!-- Ionicons -->
   <script
     type="module"
     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
