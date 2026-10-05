@@ -1,98 +1,31 @@
 'use strict';
 
+const videoLink = document.querySelector('[data-play-video]');
+const videoLabel = videoLink.querySelector('.video-label');
+const videoPanel = document.querySelector('#research-video');
+const videoMount = document.querySelector('[data-video-mount]');
 
-// ============================================================
-// Utility
-// ============================================================
+videoLink.addEventListener('click', (event) => {
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
 
-const elementToggleFunc = function (elem) {
-  elem.classList.toggle("active");
-};
+  const opening = videoPanel.hidden;
+  videoPanel.hidden = !opening;
+  videoLabel.textContent = opening ? 'Close video' : 'Video';
+  videoLink.setAttribute('aria-expanded', String(opening));
+  videoLink.setAttribute('aria-label', opening ? 'Close video' : 'Play video');
 
-
-// ============================================================
-// Sidebar
-// ============================================================
-
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-if (sidebar && sidebarBtn) {
-  sidebarBtn.addEventListener("click", function () {
-    elementToggleFunc(sidebar);
-  });
-}
-
-
-// ============================================================
-// Page Navigation
-// ============================================================
-
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-
-navigationLinks.forEach((navLink) => {
-
-  navLink.addEventListener("click", function () {
-
-    // textContent + trim을 사용해 HTML 줄바꿈/공백에 영향받지 않도록 함
-    const targetPage = this.textContent.trim().toLowerCase();
-
-    pages.forEach((page) => {
-
-      if (page.dataset.page === targetPage) {
-        page.classList.add("active");
-      } else {
-        page.classList.remove("active");
-      }
-
-    });
-
-
-    navigationLinks.forEach((link) => {
-      link.classList.remove("active");
-    });
-
-    this.classList.add("active");
-
-    window.scrollTo({
-      top: 0,
-      behavior: "instant"
-    });
-
-  });
-
-});
-
-
-// ============================================================
-// CV Print / Save as PDF
-// ============================================================
-
-const printCvBtn = document.querySelector("[data-print-cv]");
-
-if (printCvBtn) {
-
-  printCvBtn.addEventListener("click", function () {
-    window.print();
-  });
-
-}
-
-
-// ============================================================
-// Direct URL: #cv
-// ============================================================
-
-if (window.location.hash === "#cv") {
-
-  const cvNav = Array.from(navigationLinks).find(
-    (link) => link.textContent.trim().toLowerCase() === "cv"
-  );
-
-  if (cvNav) {
-    cvNav.click();
+  if (opening) {
+    const player = document.createElement('iframe');
+    player.src = 'https://www.youtube-nocookie.com/embed/NsbvDb8hZbA?autoplay=1&playsinline=1&rel=0';
+    player.title = 'LiDAR Gaussian Splatting SLAM research demo';
+    player.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+    player.allowFullscreen = true;
+    player.referrerPolicy = 'strict-origin-when-cross-origin';
+    videoMount.replaceChildren(player);
+    videoPanel.scrollIntoView({ block: 'nearest' });
+    player.focus({ preventScroll: true });
+  } else {
+    videoMount.replaceChildren();
   }
-
-}
+});

@@ -1,1338 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>SeungJun Tak</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./img.png" type="image/png">
-
-  <!-- existing stylesheet -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- google font -->
+  <meta name="description" content="SeungJun Tak — researching LiDAR SLAM, 3D Gaussian representations, and spatial understanding for autonomous robots at Sungkyunkwan University.">
+  <meta name="theme-color" content="#f8f9f5">
+  <title>SeungJun Tak — SLAM &amp; 3D Vision</title>
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://takseungjun.github.io/Taksume.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SeungJun Tak — SLAM &amp; 3D Vision">
+  <meta property="og:description" content="Research in LiDAR SLAM, 3D scene representations, and robust robot localization and mapping. Publications, research projects, and academic background.">
+  <meta property="og:url" content="https://takseungjun.github.io/Taksume.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- Research portfolio refinements -->
-  <style>
-
-    /* =========================================================
-       RESEARCH PORTFOLIO REFINEMENTS
-       ========================================================= */
-
-    .publication-summary {
-      color: var(--light-gray) !important;
-      font-size: var(--fs-7);
-      font-weight: var(--fw-400);
-      line-height: 1.65;
-      margin-top: 10px;
-      max-width: 760px;
-    }
-
-    .about-text strong {
-      color: var(--white-2);
-      font-weight: var(--fw-600);
-    }
-
-    .research {
-      margin-top: 32px;
-    }
-
-    .about_publications {
-      margin-top: 36px;
-    }
-
-    .featured-publication {
-      background:
-        linear-gradient(
-          135deg,
-          hsla(45, 100%, 72%, 0.055),
-          transparent 45%
-        ),
-        var(--bg-gradient-jet);
-    }
-
-    .featured-publication .publication-title {
-      font-size: 16px;
-      font-weight: var(--fw-600);
-    }
-
-    .cv .timeline {
-      margin-bottom: 38px;
-    }
-
-    .cv .title-wrapper .h3 {
-      font-weight: var(--fw-600);
-    }
-
-    .research-projects .timeline-text {
-      line-height: 1.7;
-    }
-
-    .research-projects .timeline-item-title {
-      font-weight: var(--fw-600);
-    }
-
-    .technical-skills-list {
-      row-gap: 14px;
-    }
-
-    .technical-skills-list dt {
-      color: var(--orange-yellow-crayola);
-    }
-
-    .info-content .title {
-      text-align: center;
-      line-height: 1.4;
-    }
-
-    .research-keywords {
-      color: var(--orange-yellow-crayola);
-      font-size: var(--fs-7);
-      font-weight: var(--fw-500);
-      line-height: 1.8;
-      margin-top: 5px;
-    }
-
-    .project-status {
-      color: var(--orange-yellow-crayola);
-      font-weight: var(--fw-500);
-    }
-
-    @media (min-width: 1024px) {
-
-      .about-text {
-        max-width: 790px;
-      }
-
-      .featured-publication {
-        padding: 22px;
-      }
-
-      .publication-title {
-        letter-spacing: -0.01em;
-      }
-    }
-
-    @media (max-width: 579px) {
-
-      .publication-summary {
-        font-size: 13px;
-      }
-
-      .research {
-        margin-top: 26px;
-      }
-
-      .about_publications {
-        margin-top: 28px;
-      }
-    }
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/script.js" defer></script>
 </head>
-
-
 <body>
-
-  <main>
-
-
-    <!-- ======================================================
-         SIDEBAR
-         ====================================================== -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./img.png" alt="Portrait of SeungJun Tak" width="80">
-        </figure>
-
-        <div class="info-content">
-
-          <h1 class="name" title="SeungJun Tak">
-            SeungJun Tak
-          </h1>
-
-          <p class="title">
-            M.S.–Ph.D. Student · SLAM & 3D Vision
-          </p>
-
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-
-          <!-- Email -->
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-
-              <p class="contact-title">
-                Email
-              </p>
-
-              <a
-                href="mailto:tmdwns8840@g.skku.edu"
-                class="contact-link"
-              >
-                tmdwns8840@g.skku.edu
-              </a>
-
-            </div>
-
-          </li>
-
-
-          <!-- GitHub -->
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-github"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-
-              <p class="contact-title">
-                GitHub
-              </p>
-
-              <a
-                href="https://github.com/TakSeungJun"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-link"
-              >
-                TakSeungJun
-              </a>
-
-            </div>
-
-          </li>
-
-
-          <!-- Google Scholar -->
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-
-              <p class="contact-title">
-                Google Scholar
-              </p>
-
-              <a
-                href="https://scholar.google.com/citations?user=KfSu3l8AAAAJ&hl=ko"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-link"
-              >
-                Link
-              </a>
-
-            </div>
-
-          </li>
-
-
-          <!-- Location -->
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-
-              <p class="contact-title">
-                Location
-              </p>
-
-              <address>
-                Sungkyunkwan Univ.
-              </address>
-
-              <address>
-                Suwon, Republic of Korea
-              </address>
-
-            </div>
-
-          </li>
-
-        </ul>
-
-
-        <div class="separator"></div>
-
-
-        <ul class="social-list">
-
-          <li class="social-item">
-
-            <a
-              href="https://www.linkedin.com/in/seungjun-tak-98b402366"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link"
-            >
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-    <!-- ======================================================
-         MAIN CONTENT
-         ====================================================== -->
-
-    <div class="main-content">
-
-
-      <!-- ====================================================
-           NAVBAR
-           ==================================================== -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button
-              class="navbar-link active"
-              data-nav-link
-            >
-              About
-            </button>
-          </li>
-
-          <li class="navbar-item">
-            <button
-              class="navbar-link"
-              data-nav-link
-            >
-              CV
-            </button>
-          </li>
-
-        </ul>
-
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#home" aria-label="SeungJun Tak, home">TAK<span aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Research Projects</a>
+        <a href="#teaching">Teaching Experience</a>
+        <a href="#skills">Technical Skills</a>
       </nav>
-
-
-
-      <!-- ====================================================
-           ABOUT
-           ==================================================== -->
-
-      <article
-        class="about active"
-        data-page="about"
-      >
-
-
-        <!-- About me -->
-
-        <header>
-          <h3 class="h3 article-title">
-            About me
-          </h3>
-        </header>
-
-
-        <section class="about-text">
-
-          <p>
-            I am an M.S.–Ph.D. integrated program student in
-            Intelligent Robotics at Sungkyunkwan University,
-            advised by Prof.
-            <a
-              href="https://bogus2000.github.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Hyeonwoo Yu
-            </a>.
-            I received my B.S. in Electrical Engineering from UNIST.
-          </p>
-
-        </section>
-
-
-
-        <!-- Research Interest -->
-
-        <section class="research">
-
-          <h3 class="h3 article-title">
-            Research Interest
-          </h3>
-
-          <section class="about-text">
-
-            <p>
-              My research focuses on
-              <strong>
-                LiDAR SLAM, 3D scene representation, and robust spatial
-                mapping for autonomous robots
-              </strong>.
-              In particular, I am interested in real-time LiDAR-based
-              localization and mapping using Gaussian representations,
-              dynamic-scene understanding, and long-term mapping in
-              changing environments.
-            </p>
-
-            <p class="research-keywords">
-              LiDAR SLAM · 3D Gaussian Splatting · Dynamic & Lifelong Mapping ·
-              3D Reconstruction · Localization · Robot Perception
-            </p>
-
-          </section>
-
-        </section>
-
-
-
-        <!-- Selected Publication -->
-
-        <section class="about_publications">
-
-          <h3 class="h3 article-title">
-            Selected Publication
-          </h3>
-
-          <div class="featured-publication">
-
-
-            <div class="publication-meta">
-
-              <span class="publication-venue">
-                ECCV 2026
-              </span>
-
-              <span class="publication-status">
-                Accepted
-              </span>
-
-            </div>
-
-
-            <h4 class="publication-title">
-              Real-Time LiDAR Gaussian Splatting SLAM via
-              Geometry-Aware Covariance Coupling
-            </h4>
-
-
-            <p class="publication-authors">
-
-              <strong>
-                SeungJun Tak<sup>*</sup>
-              </strong>,
-
-              Yewon Jeon<sup>*</sup>,
-              Jaeik Hwang,
-              Suk Min Hwang,
-              Seongbo Ha,
-              Hyeonwoo Yu
-
-            </p>
-
-
-            <p class="publication-note">
-              <sup>*</sup> Equal contribution
-            </p>
-
-
-            <p class="publication-summary">
-              Real-time LiDAR-only SLAM with dense Gaussian mapping,
-              coupling geometric covariance between tracking and mapping
-              for accurate and efficient 3D scene reconstruction.
-            </p>
-
-
-            <div class="publication-links">
-
-              <a
-                href="https://lab-of-ai-and-robotics.github.io/GS-SLAM-Family/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Project
-              </a>
-
-              <a
-                href="https://arxiv.org/abs/2607.04127"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Paper
-              </a>
-
-              <a
-                href="https://github.com/Lab-of-AI-and-Robotics/LiDAR-GS-SLAM"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Code
-              </a>
-
-              <a
-                href="https://youtu.be/NsbvDb8hZbA"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Video
-              </a>
-
-            </div>
-
-          </div>
-
-        </section>
-
-      </article>
-
-
-
-      <!-- ====================================================
-           CV
-           ==================================================== -->
-
-      <article
-        class="cv"
-        data-page="cv"
-      >
-
-
-        <!-- CV Header -->
-
-        <header class="cv-header">
-
-          <h2 class="h2 article-title">
-            CV
-          </h2>
-
-          <button
-            class="cv-download"
-            type="button"
-            data-print-cv
-          >
-            <ion-icon name="download-outline"></ion-icon>
-            <span>Save as PDF</span>
-          </button>
-
-        </header>
-
-
-
-        <!-- ==================================================
-             EDUCATION
-             ================================================== -->
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-
-            <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">
-              Education
-            </h3>
-
-          </div>
-
-
-          <ol class="timeline-list">
-
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2023.09 — Present
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  M.S.–Ph.D. Integrated Program
-                </h4>
-
-                <p class="timeline-text">
-
-                  <strong>
-                    Sungkyunkwan University
-                  </strong>
-
-                  <br>
-
-                  Intelligent Robotics
-
-                  <br>
-
-                  Advisor: Prof. Hyeonwoo Yu
-
-                  <br>
-                  Graduate Coursework GPA: <strong>4.17 / 4.5</strong><br>
-                  <strong>
-                    Expected Graduation: August 2029
-                  </strong>
-
-                </p>
-
-              </div>
-
-            </li>
-
-
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2017.03 — 2023.08
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  B.S. in Electrical Engineering
-                </h4>
-
-                <p class="timeline-text">
-                  <strong>
-                    UNIST
-                  </strong>
-                </p>
-
-              </div>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             PUBLICATIONS
-             ================================================== -->
-
-        <section class="timeline publications-section">
-
-
-          <div class="title-wrapper">
-
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">
-              Publications
-            </h3>
-
-          </div>
-
-
-
-          <!-- International -->
-
-          <div class="publication-group">
-
-            <h4 class="publication-group-title">
-              International
-            </h4>
-
-
-            <ol class="publication-list">
-
-              <li class="publication-item">
-
-
-                <div class="publication-meta">
-
-                  <span class="publication-venue">
-                    ECCV 2026
-                  </span>
-
-                  <span class="publication-status">
-                    Accepted
-                  </span>
-
-                </div>
-
-
-                <h4 class="publication-title">
-                  Real-Time LiDAR Gaussian Splatting SLAM via
-                  Geometry-Aware Covariance Coupling
-                </h4>
-
-
-                <p class="publication-authors">
-
-                  <strong>
-                    SeungJun Tak<sup>*</sup>
-                  </strong>,
-
-                  Yewon Jeon<sup>*</sup>,
-                  Jaeik Hwang,
-                  Suk Min Hwang,
-                  Seongbo Ha,
-                  Hyeonwoo Yu
-
-                </p>
-
-
-                <p class="publication-note">
-                  <sup>*</sup> Equal contribution
-                </p>
-
-
-                <p class="publication-summary">
-                  Real-time LiDAR-only SLAM with dense Gaussian mapping,
-                  coupling geometric covariance between tracking and mapping
-                  for accurate and efficient 3D scene reconstruction.
-                </p>
-
-
-                <div class="publication-links">
-
-                  <a
-                    href="https://lab-of-ai-and-robotics.github.io/GS-SLAM-Family/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Project
-                  </a>
-
-                  <a
-                    href="https://arxiv.org/abs/2607.04127"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Paper
-                  </a>
-
-                  <a
-                    href="https://github.com/Lab-of-AI-and-Robotics/LiDAR-GS-SLAM"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Code
-                  </a>
-
-                  <a
-                    href="https://youtu.be/NsbvDb8hZbA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Video
-                  </a>
-
-                </div>
-
-              </li>
-
-            </ol>
-
-          </div>
-
-
-
-          <!-- Domestic Conferences -->
-
-          <div class="publication-group">
-
-            <h4 class="publication-group-title">
-              Domestic Conferences
-            </h4>
-
-
-            <ol class="publication-list">
-
-
-              <li class="publication-item">
-
-                <div class="publication-meta">
-
-                  <span class="publication-venue">
-                    KRoC 2026
-                  </span>
-
-                  <span class="publication-status">
-                    Published
-                  </span>
-
-                </div>
-
-                <h4 class="publication-title">
-                  Robust Localization in Changing Logistics Environments
-                </h4>
-
-                <p class="publication-english-title">
-                  변화하는 물류 환경에 강건한 위치 추정 기법
-                </p>
-
-                <p class="publication-authors">
-                  <strong>SeungJun Tak</strong>,
-                  Hyeonwoo Yu
-                </p>
-
-              </li>
-
-
-
-              <li class="publication-item">
-
-                <div class="publication-meta">
-
-                  <span class="publication-venue">
-                    KRoC 2025
-                  </span>
-
-                  <span class="publication-status">
-                    Published
-                  </span>
-
-                </div>
-
-                <h4 class="publication-title">
-                  SLAM in Logistics Environments Using Pillar Feature Points
-                </h4>
-
-                <p class="publication-english-title">
-                  기둥 특징점을 활용한 물류창고 환경 SLAM
-                </p>
-
-                <p class="publication-authors">
-                  <strong>SeungJun Tak</strong>,
-                  Hyeonwoo Yu
-                </p>
-
-              </li>
-
-            </ol>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             RESEARCH PROJECTS
-             ================================================== -->
-
-        <section class="timeline research-projects">
-
-
-          <div class="title-wrapper">
-
-            <div class="icon-box">
-              <ion-icon name="layers-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">
-              Research Projects
-            </h3>
-
-          </div>
-
-
-          <ol class="timeline-list">
-
-
-            <!-- LG Electronics Humanoid -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2026.07 — 2027.04
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Real-Time 3D RGB-D SLAM System for Humanoid Robots
-                  and Low-Profile AMRs
-                </h4>
-
-                <p class="timeline-text">
-
-                  <strong>
-                    LG Electronics, HS
-                  </strong>
-
-                  · Graduate Researcher ·
-                  <span class="project-status">
-                    Ongoing
-                  </span>
-
-                  <br>
-
-                  Developing a real-time SLAM system for humanoid robots
-                  and low-profile AMRs, with a focus on robust localization
-                  and 3D mapping for embodied robotic platforms.
-
-                </p>
-
-              </div>
-
-            </li>
-
-
-
-            <!-- LG PRI Drone -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2026.04 — 2026.12
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Development of a SLAM-Drone-Based Cart Monitoring System
-                </h4>
-
-                <p class="timeline-text">
-
-                  <strong>
-                    LG PRI
-                  </strong>
-
-                  · Graduate Researcher
-
-                  <br>
-
-                  Optimized the SLAM pipeline for aerial drone operation
-                  and developed loop-closure functionality for robust
-                  trajectory estimation in drone-based monitoring.
-
-                </p>
-
-              </div>
-
-            </li>
-
-
-
-            <!-- Samsung -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2026.01 — 2026.11
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Physical AI–Based Integrated Autonomous Navigation for AMRs
-                </h4>
-
-                <p class="timeline-text">
-
-                  <strong>
-                    Samsung Electronics GTR
-                  </strong>
-
-                  · Graduate Researcher
-
-                  <br>
-
-                  Developed structural alignment between CAD floor plans
-                  and reconstructed 3D maps, and optimized the localization
-                  and mapping pipeline for AMR deployment.
-
-                </p>
-
-              </div>
-
-            </li>
-
-
-
-            <!-- LG Gaussian Map -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2025.05 — 2026.05
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Real-Time High-Resolution 3D RGB-D SLAM for Embedded
-                  Systems in Changing Environments
-                </h4>
-
-                <p class="timeline-text">
-
-                  <strong>
-                    LG Electronics, HS
-                  </strong>
-
-                  · Graduate Researcher
-
-                  <br>
-
-                  Developed localization on Gaussian Splatting maps and
-                  leveraged MASt3R-based place recognition for robust
-                  global initialization and loop-closure detection.
-
-                </p>
-
-              </div>
-
-            </li>
-
-
-
-            <!-- Mobyus -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2024.08 — 2025.03
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Sensor Fusion 3D LiDAR Mapping and Map-Based
-                  Localization for AMRs
-                </h4>
-
-                <p class="timeline-text">
-
-                  <strong>
-                    Mobyus
-                  </strong>
-
-                  · Graduate Researcher
-
-                  <br>
-
-                  Designed pole-based geometric features tailored to
-                  logistics environments for robust LiDAR SLAM and
-                  map-based localization in repetitive warehouse scenes.
-
-                </p>
-
-              </div>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             TECHNICAL SKILLS
-             ================================================== -->
-
-        <section class="timeline technical-skills">
-
-
-          <div class="title-wrapper">
-
-            <div class="icon-box">
-              <ion-icon name="code-slash-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">
-              Technical Skills
-            </h3>
-
-          </div>
-
-
-          <dl class="technical-skills-list">
-
-
-            <div>
-              <dt>Programming</dt>
-              <dd>
-                C++, Python, CUDA
-              </dd>
-            </div>
-
-
-            <div>
-              <dt>Robotics & SLAM</dt>
-              <dd>
-                ROS/ROS 2,
-                LiDAR SLAM,
-                Visual SLAM,
-                Sensor Fusion,
-                G-ICP,
-                Loop Closure,
-                Localization
-              </dd>
-            </div>
-
-
-            <div>
-              <dt>3D Vision & Mapping</dt>
-              <dd>
-                Gaussian Splatting,
-                3D Reconstruction,
-                Point Cloud Processing,
-                Place Recognition
-              </dd>
-            </div>
-
-
-            <div>
-              <dt>Libraries & Frameworks</dt>
-              <dd>
-                PyTorch,
-                GTSAM,
-                PCL,
-                Open3D,
-                Eigen
-              </dd>
-            </div>
-
-
-            <div>
-              <dt>Development</dt>
-              <dd>
-                Linux,
-                Git,
-                Docker,
-                CMake
-              </dd>
-            </div>
-
-          </dl>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             TEACHING EXPERIENCE
-             ================================================== -->
-
-        <section class="timeline teaching-experience">
-
-
-          <div class="title-wrapper">
-
-            <div class="icon-box">
-              <ion-icon name="briefcase-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">
-              Teaching Experience
-            </h3>
-
-          </div>
-
-
-          <ol class="timeline-list">
-
-
-            <!-- Reinforcement Learning -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2025.09 — 2025.12
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Teaching Assistant — Reinforcement Learning
-                </h4>
-
-                <p class="timeline-text">
-                  <strong>
-                    Sungkyunkwan University
-                  </strong>
-                </p>
-
-              </div>
-
-            </li>
-
-
-
-            <!-- Estimation Theory and Nonparametric Bayesian -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2025.03 — 2025.06
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Teaching Assistant — Estimation Theory and
-                  Nonparametric Bayesian Methods
-                </h4>
-
-                <p class="timeline-text">
-                  <strong>
-                    Sungkyunkwan University
-                  </strong>
-                </p>
-
-              </div>
-
-            </li>
-
-
-
-            <!-- 3D SLAM -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2023.09 — 2024.02
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Teaching Assistant — 3D SLAM Techniques and Adaptive
-                  Perception Technologies Using Unsupervised Learning
-                </h4>
-
-                <p class="timeline-text">
-                  <strong>
-                    UNIST
-                  </strong>
-                </p>
-
-              </div>
-
-            </li>
-
-
-
-            <!-- AI Novatus -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2023.04 — 2023.07
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Teaching Assistant — Kyungnam AI Novatus Academy
-                </h4>
-
-              </div>
-
-            </li>
-
-
-
-            <!-- LG DX -->
-
-            <li class="timeline-item">
-
-              <time class="timeline-date">
-                2022.08
-              </time>
-
-              <div class="timeline-content">
-
-                <h4 class="h4 timeline-item-title">
-                  Teaching Assistant — LG DX Intensive Course
-                </h4>
-
-                <p class="timeline-text">
-                  Privacy-Preserving Machine Learning
-                </p>
-
-              </div>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-
-      </article>
-
+      <a class="button button-primary" href="./assets/files/SeungJun-Tak-CV.pdf" download="SeungJun-Tak-CV.pdf" type="application/pdf" aria-label="Download SeungJun Tak's CV (PDF)">CV PDF <span aria-hidden="true">↓</span></a>
     </div>
+  </header>
 
+  <main id="main" tabindex="-1">
+    <header class="print-identity">
+      <h2>SeungJun Tak</h2>
+      <p>M.S.–Ph.D. Student · Intelligent Robotics · Sungkyunkwan University</p>
+      <p><a href="mailto:tmdwns8840@g.skku.edu">tmdwns8840@g.skku.edu</a> · Suwon, Republic of Korea</p>
+      <p><a href="https://takseungjun.github.io/Taksume.github.io/">takseungjun.github.io/Taksume.github.io</a> · <a href="https://github.com/TakSeungJun">github.com/TakSeungJun</a></p>
+    </header>
+
+    <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+      <div class="hero-heading">
+        <p class="eyebrow" id="research"><span>LiDAR SLAM</span><span>3D Vision</span><span>Robot Perception</span></p>
+        <h1 id="hero-title">SeungJun Tak<span class="accent">.</span></h1>
+        <p class="hero-role">M.S.–Ph.D. Student · <strong>Sungkyunkwan University</strong></p>
+      </div>
+      <figure class="hero-portrait">
+        <img src="./img.png" alt="Portrait of SeungJun Tak" width="1122" height="1402" fetchpriority="high">
+      </figure>
+      <div class="hero-bio">
+        <p>I research <strong>real-time localization and mapping</strong> for robots using <strong>LiDAR SLAM</strong> and <strong>3D scene representations</strong>. I study Intelligent Robotics with Prof. <a href="https://bogus2000.github.io" target="_blank" rel="noopener noreferrer">Hyeonwoo Yu</a>, following a B.S. in Electrical Engineering from <strong>UNIST</strong>.</p>
+        <div class="profile-links">
+          <a href="mailto:tmdwns8840@g.skku.edu">Email <span aria-hidden="true">↗</span></a>
+          <a href="https://scholar.google.com/citations?user=KfSu3l8AAAAJ&hl=ko" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/TakSeungJun" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/seungjun-tak-98b402366" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="publications section-shell" id="publications" aria-labelledby="publications-title">
+      <header class="section-heading">
+        <h2 id="publications-title">Publications</h2>
+        <a class="text-link" href="https://scholar.google.com/citations?user=KfSu3l8AAAAJ&hl=ko" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+      </header>
+      <ol class="research-list">
+        <li class="research-entry">
+          <span class="research-year">2026</span>
+          <article aria-labelledby="lidar-paper-title">
+            <h3 id="lidar-paper-title"><a href="https://arxiv.org/abs/2607.04127" target="_blank" rel="noopener noreferrer">Real-Time LiDAR Gaussian Splatting SLAM via Geometry-Aware Covariance Coupling</a></h3>
+            <p class="publication-authors"><strong>SeungJun Tak<sup>*</sup></strong>, Yewon Jeon<sup>*</sup>, Jaeik Hwang, Suk Min Hwang, Seongbo Ha, Hyeonwoo Yu</p>
+            <p class="research-venue"><strong>ECCV 2026</strong> · Accepted <span>· <sup>*</sup> Equal contribution</span></p>
+            <p class="publication-summary">Real-time LiDAR-only SLAM with dense Gaussian mapping, coupling geometric covariance between tracking and mapping.</p>
+            <div class="publication-links">
+              <a href="https://arxiv.org/abs/2607.04127" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/Lab-of-AI-and-Robotics/LiDAR-GS-SLAM" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+              <a href="https://lab-of-ai-and-robotics.github.io/GS-SLAM-Family/" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a>
+              <a href="https://youtu.be/NsbvDb8hZbA" target="_blank" rel="noopener noreferrer" data-play-video aria-controls="research-video" aria-expanded="false"><span class="video-label">Video</span> <span class="video-toggle-icon" aria-hidden="true">▸</span></a>
+            </div>
+            <div class="publication-video" id="research-video" hidden>
+              <div class="video-frame" data-video-mount></div>
+              <p class="video-fallback"><a href="https://youtu.be/NsbvDb8hZbA" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
+            </div>
+          </article>
+        </li>
+        <li class="research-entry">
+          <span class="research-year">2026</span>
+          <article aria-labelledby="localization-paper-title">
+            <h3 id="localization-paper-title">Robust Localization in Changing Logistics Environments</h3>
+            <p class="publication-english-title" lang="ko">변화하는 물류 환경에 강건한 위치 추정 기법</p>
+            <p class="publication-authors"><strong>SeungJun Tak</strong>, Hyeonwoo Yu</p>
+            <p class="research-venue"><strong>KRoC 2026</strong> · Published</p>
+          </article>
+        </li>
+        <li class="research-entry">
+          <span class="research-year">2025</span>
+          <article aria-labelledby="pillar-paper-title">
+            <h3 id="pillar-paper-title">SLAM in Logistics Environments Using Pillar Feature Points</h3>
+            <p class="publication-english-title" lang="ko">기둥 특징점을 활용한 물류창고 환경 SLAM</p>
+            <p class="publication-authors"><strong>SeungJun Tak</strong>, Hyeonwoo Yu</p>
+            <p class="research-venue"><strong>KRoC 2025</strong> · Published</p>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <section class="timeline education section-shell" id="education" aria-labelledby="education-title">
+      <header class="section-heading">
+        <h2 id="education-title">Education</h2>
+      </header>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2023.09 — Present
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              M.S.–Ph.D. Integrated Program
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                Sungkyunkwan University
+              </strong>
+              <br>
+              Intelligent Robotics · Advisor: Prof. Hyeonwoo Yu
+              <br>
+              Graduate Coursework GPA: <strong>4.17 / 4.5</strong><br>
+              <strong>
+                Expected Graduation: August 2029
+              </strong>
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2017.03 — 2023.08
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              B.S. in Electrical Engineering
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                UNIST
+              </strong>
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="timeline research-projects section-shell" id="projects" aria-labelledby="projects-title">
+      <header class="section-heading">
+        <h2 id="projects-title">Research Projects</h2>
+      </header>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2026.07 — 2027.04
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Real-Time 3D RGB-D SLAM System for Humanoid Robots
+              and Low-Profile AMRs
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                LG Electronics, HS
+              </strong>
+              · Graduate Researcher ·
+              <span class="project-status">
+                Ongoing
+              </span>
+              <br>
+              Developing <strong>real-time SLAM</strong> for humanoid robots and low-profile AMRs,
+              focusing on robust localization and 3D mapping.
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2026.04 — 2026.12
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Development of a SLAM-Drone-Based Cart Monitoring System
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                LG PRI
+              </strong>
+              · Graduate Researcher
+              <br>
+              Optimized SLAM for aerial drones and developed <strong>loop closure</strong>
+              for robust trajectory estimation in cart monitoring.
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2026.01 — 2026.11
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Physical AI–Based Integrated Autonomous Navigation for AMRs
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                Samsung Electronics GTR
+              </strong>
+              · Graduate Researcher
+              <br>
+              Aligned <strong>CAD floor plans with reconstructed 3D maps</strong>
+              and optimized localization and mapping for AMR deployment.
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2025.05 — 2026.05
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Real-Time High-Resolution 3D RGB-D SLAM for Embedded
+              Systems in Changing Environments
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                LG Electronics, HS
+              </strong>
+              · Graduate Researcher
+              <br>
+              Developed localization on <strong>Gaussian Splatting maps</strong> and
+              MASt3R-based place recognition for robust global initialization and loop-closure detection.
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2024.08 — 2025.03
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Sensor Fusion 3D LiDAR Mapping and Map-Based
+              Localization for AMRs
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                Mobyus
+              </strong>
+              · Graduate Researcher
+              <br>
+              Designed <strong>pole-based geometric features</strong> for robust LiDAR SLAM
+              and map-based localization in repetitive warehouses.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="timeline teaching-experience section-shell" id="teaching" aria-labelledby="teaching-title">
+      <header class="section-heading">
+        <h2 id="teaching-title">Teaching Experience</h2>
+      </header>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2025.09 — 2025.12
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Teaching Assistant — Reinforcement Learning
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                Sungkyunkwan University
+              </strong>
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2025.03 — 2025.06
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Teaching Assistant — Estimation Theory and
+              Nonparametric Bayesian Methods
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                Sungkyunkwan University
+              </strong>
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2023.09 — 2024.02
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Teaching Assistant — 3D SLAM Techniques and Adaptive
+              Perception Technologies Using Unsupervised Learning
+            </h3>
+            <p class="timeline-text">
+              <strong>
+                UNIST
+              </strong>
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2023.04 — 2023.07
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Teaching Assistant — Kyungnam AI Novatus Academy
+            </h3>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <time class="timeline-date">
+            2022.08
+          </time>
+          <div class="timeline-content">
+            <h3 class="timeline-item-title">
+              Teaching Assistant — LG DX Intensive Course
+            </h3>
+            <p class="timeline-text">
+              Privacy-Preserving Machine Learning
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="timeline technical-skills section-shell" id="skills" aria-labelledby="skills-title">
+      <header class="section-heading">
+        <h2 id="skills-title">Technical Skills</h2>
+      </header>
+      <dl class="technical-skills-list">
+        <div>
+          <dt>Programming</dt>
+          <dd>
+            C++, Python, CUDA
+          </dd>
+        </div>
+        <div>
+          <dt>Robotics & SLAM</dt>
+          <dd>
+            ROS/ROS 2,
+            LiDAR SLAM,
+            Visual SLAM,
+            Sensor Fusion,
+            G-ICP,
+            Loop Closure,
+            Localization
+          </dd>
+        </div>
+        <div>
+          <dt>3D Vision & Mapping</dt>
+          <dd>
+            Gaussian Splatting,
+            3D Reconstruction,
+            Point Cloud Processing,
+            Place Recognition
+          </dd>
+        </div>
+        <div>
+          <dt>Libraries & Frameworks</dt>
+          <dd>
+            PyTorch,
+            GTSAM,
+            PCL,
+            Open3D,
+            Eigen
+          </dd>
+        </div>
+        <div>
+          <dt>Development</dt>
+          <dd>
+            Linux,
+            Git,
+            Docker,
+            CMake
+          </dd>
+        </div>
+      </dl>
+    </section>
   </main>
-
-
-
-  <!-- existing JS -->
-  <script src="./assets/js/script.js"></script>
-
-
-  <!-- Ionicons -->
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-  ></script>
-
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-  ></script>
-
+  <footer class="site-footer section-shell" id="contact">
+    <div><h2>Contact</h2><p>Suwon, Republic of Korea</p></div>
+    <a class="contact-email" href="mailto:tmdwns8840@g.skku.edu">tmdwns8840@g.skku.edu <span aria-hidden="true">↗</span></a>
+    <div class="footer-bottom"><span>SeungJun Tak · SLAM &amp; 3D Vision</span><a href="#home">Back to top ↑</a></div>
+  </footer>
 </body>
-
 </html>

@@ -42,3 +42,14 @@ If you want to contact me you can reach me at [Twitter](https://www.twitter.com/
 ## License
 
 MIT
+
+## Updating the CV PDF
+
+The header downloads `assets/files/SeungJun-Tak-CV.pdf` directly. After updating
+the CV content in `index.html`, regenerate this file so the website and PDF agree:
+
+1. Open the local website in Chrome and use **Print → Save as PDF**.
+2. Use A4 paper, 100% scale, and the default margins; turn off headers and footers.
+   The print stylesheet arranges the full CV and hides navigation and video controls.
+3. Save the result as `assets/files/SeungJun-Tak-CV.pdf`, check its content and page
+   breaks, and include the updated PDF with the website changes.
