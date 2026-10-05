@@ -45,6 +45,9 @@ MIT
 
 ## Updating the CV PDF
 
+When changing the CSS or JavaScript, update the corresponding `?v=` value in
+`index.html` so returning visitors load the matching files instead of cached ones.
+
 The header downloads `assets/files/SeungJun-Tak-CV.pdf` directly. After updating
 the CV content in `index.html`, regenerate this file so the website and PDF agree:
 
